@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "code": "abc",
+    "name": "Bistro Table and Benches",
+    "price": "$599.99",
+    "description": "Hand crafted bistro table made by local artisans following historical traditions passed down for seven generations.",
+    "photo": {
+      "filename": "products/table.jpg",
+      "link": "https://www.pexels.com/photo/green-leafed-potted-plant-on-bistro-table-2647714/",
+      "credit": "Photo by Blank Space from Pexels"
+    },
+    "details": [
+      {
+        "label": "Table",
+        "value": "30-inch round top, 32 inches high"
+      },
+      {
+        "label": "Benches",
+        "value": "30-inch x 19-inch, 22 inches high"
+      },
+      {
+        "label": "Design",
+        "value": "Modern, Simple, Elegant"
+      },
+      {
+        "label": "Surface Materials",
+        "value": "Hickory and Oak"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "code": "xyz",
+    "name": "Classic Chair",
+    "price": "$43.88",
+    "description": "Simple and elegant. Perfect for guests at parties and gatherings!",
+    "photo": {
+      "filename": "products/chair.jpg",
+      "link": "https://www.pexels.com/photo/green-wooden-chair-on-white-surface-963486/",
+      "credit": "Photo by Paula Schmidt from Pexels"
+    },
+    "details": [
+      {
+        "label": "Color",
+        "value": "Green"
+      },
+      {
+        "label": "Material",
+        "value": "Wood"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "code": "klm",
+    "name": "Park Bench",
+    "price": "$125.00",
+    "description": "The classic park bench style is now available for your own backyard!",
+    "photo": {
+      "filename": "products/bench.jpg",
+      "link": "https://www.pexels.com/photo/empty-bench-2828827/",
+      "credit": "Photo by Dariusz Staniszewski from Pexels"
+    },
+    "details": [
+      {
+        "label": "Color",
+        "value": "Green"
+      },
+      {
+        "label": "Materials",
+        "value": "Pressure treated wood, wrought iron"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "code": "def",
+    "name": "Outdoor Chaise Lounge",
+    "price": "$299.99",
+    "description": "Relax in style with this comfortable chaise lounge. Perfect for summer days!",
+    "photo": {
+      "filename": "products/chaise.jpg",
+      "link": "https://www.pexels.com/photo/chaise-lounges-under-patio-umbrellas-5724126/",
+      "credit": "Photo by Reis Fausto from Pexels"
+    },
+    "details": [
+      {
+        "label": "Color",
+        "value": "Yellow"
+      },
+      {
+        "label": "Material",
+        "value": "Aluminum and Woven Fabric"
+      },
+      {
+        "label": "Dimensions",
+        "value": "76 x 25 x 42 inches"
+      }
+    ]
+    },
+    {
+    "id": 5,
+    "code": "ghi",
+    "name": "Folding Adirondack Chair",
+    "price": "$159.99",
+    "description": "The classic Adirondack style chair now available in a convenient folding design!",
+    "photo": {
+      "filename": "products/adirondack.jpg",
+      "link": "https://www.pexels.com/photo/four-brown-adirondack-chairs-on-porch-1516047/",
+      "credit": "Photo by Alex Block from Pexels"
+    },
+    "details": [
+      {
+        "label": "Color",
+        "value": "Cedar"
+      },
+      {
+        "label": "Material",
+        "value": "Fir Wood"
+      },
+      {
+        "label": "Dimensions",
+        "value": "36 x 29 x 38 inches"
+      }
+    ]
+    },
+    {
+    "id": 6,
+    "code": "jkl",
+    "name": "Patio Dining Set",
+    "price": "$999.99",
+    "description": "Enjoy your outdoor meals with this stylish patio dining set. Comes with a table and six chairs!",
+    "photo": {
+      "filename": "products/dining.jpg",
+      "link": "https://www.pexels.com/photo/food-on-brown-wooden-table-with-chairs-and-plates-5638639/",
+      "credit": "Photo by Daria Obymaha from Pexels"
+    },
+    "details": [
+      {
+        "label": "Table",
+        "value": "48-inch x 30-inch rectangle top, 29 inches high"
+      },
+      {
+        "label": "Chairs",
+        "value": "19 x 18 x 36 inches"
+      },
+      {
+        "label": "Material",
+        "value": "Wicker and Aluminum"
+      }
+    ]
+    }
+]
