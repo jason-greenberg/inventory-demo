@@ -1,11 +1,85 @@
 
-# Create React App Template
+# Inventory Demo
 
-A no-frills template from which to create React applications with
-[Create React App](https://github.com/facebook/create-react-app).
+A React project that displays a list of products and displays details of selected product in a side panel.
 
-```sh
-npx create-react-app my-app --template @appacademy/simple --use-npm
+## Components
+- `ProductView`: main component that renders the product list and side panel
+- `ProductListItem`: component for each item in the product list
+- `ProductDetails`: component that displays details of selected product
+
+## Features
+- On initial render, the side panel state (open or closed) is retrieved from local storage.
+T- he side panel can be opened and closed by clicking the toggle button.
+- When a product is selected, the side panel opens and displays details of the selected product.
+- When the side panel is closed, the selected product is cleared.
+- The side panel state is stored in local storage so it persist across page refreshes.
+## Usage
+The component takes a single prop products which is an array of product objects, with each object having the following properties:
+
+- `id` (number)
+- `name` (string)
+- `description` (string)
+- `price` (string)
+- `photo` (object)
+- `filename` (string)
+- `details` (array of objects)
+- `label` (string)
+- `value` (string)
+
+Here is an example usage of the main component:
+```js
+function ProductView({ products }) {
+  const [sideOpen, setSideOpen] = useState(true);
+  const [selectedProduct, setSelectedProduct] = useState('');
+
+  // Retreive side panel state from local storage on initial render
+  useEffect(() => {
+    const storedValue = localStorage.getItem('sideOpen');
+    if (storedValue) setSideOpen(JSON.parse(storedValue));
+  }, []);
+  
+  // Open side panel when selection is made
+  useEffect(() => {
+    if (selectedProduct) setSideOpen(true);
+  }, [selectedProduct]);
+  
+  // Clear selection when the panel is closed
+  useEffect(() => {
+    if (!sideOpen) setSelectedProduct('');
+    // store state in localstorage
+    localStorage.setItem('sideOpen', sideOpen);
+  }, [sideOpen])
+
+  return (
+    <div className="product-view">
+      <div className="product-main-area">
+        <h1>Products</h1>
+        <div className="product-list">
+          {products.map(item =>
+            <ProductListItem
+              key={item.id}
+              product={item}
+              onClick={() => setSelectedProduct(item)}
+              isSelected={selectedProduct && selectedProduct.id === item.id}
+            />
+          )}
+        </div>
+      </div>
+      <div className="product-side-panel">
+        <div className="product-side-panel-toggle-wrapper">
+          <div className="product-side-panel-toggle"
+               onClick={() => setSideOpen(!sideOpen)}>
+            {sideOpen ? '>' : '<'}
+          </div>
+        </div>
+        <ProductDetails visible={sideOpen} product={products.find(el => el.id === selectedProduct.id)} />
+      </div>
+    </div>
+  )
+}
+
+export default ProductView;
 ```
 
 ## Available Scripts
@@ -34,43 +108,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
