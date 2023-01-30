@@ -80,7 +80,7 @@
     "price": "$299.99",
     "description": "Relax in style with this comfortable chaise lounge. Perfect for summer days!",
     "photo": {
-      "filename": "products/chaise.jpg",
+      "filename": "products/chaise.jpeg",
       "link": "https://www.pexels.com/photo/chaise-lounges-under-patio-umbrellas-5724126/",
       "credit": "Photo by Reis Fausto from Pexels"
     },
@@ -106,7 +106,7 @@
     "price": "$159.99",
     "description": "The classic Adirondack style chair now available in a convenient folding design!",
     "photo": {
-      "filename": "products/adirondack.jpg",
+      "filename": "products/adirondack-chair.jpeg",
       "link": "https://www.pexels.com/photo/four-brown-adirondack-chairs-on-porch-1516047/",
       "credit": "Photo by Alex Block from Pexels"
     },
@@ -132,7 +132,7 @@
     "price": "$999.99",
     "description": "Enjoy your outdoor meals with this stylish patio dining set. Comes with a table and six chairs!",
     "photo": {
-      "filename": "products/dining.jpg",
+      "filename": "products/dining.jpeg",
       "link": "https://www.pexels.com/photo/food-on-brown-wooden-table-with-chairs-and-plates-5638639/",
       "credit": "Photo by Daria Obymaha from Pexels"
     },

@@ -1,6 +1,11 @@
+import ProductView from "./components/ProductView";
+import products from './data/products.json'
+
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <div className="App">
+      <ProductView products={products} />
+    </div>
   );
 }
 
