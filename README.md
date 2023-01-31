@@ -3,6 +3,9 @@
 
 A React project that displays a list of products and displays details of selected product in a side panel.
 
+## Live Site
+https://inventorydemo.netlify.app/
+
 ## Components
 - `ProductView`: main component that renders the product list and side panel
 - `ProductListItem`: component for each item in the product list
